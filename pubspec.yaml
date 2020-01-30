@@ -1,0 +1,42 @@
+name: mera_store
+description: E POS Barcode scanner and checkout for Mobile in Flutter
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^0.1.3
+  firebase_core: ^0.4.3+2
+  cloud_firestore: ^0.13.0+1
+  firebase_auth: ^0.15.4
+  google_sign_in: ^4.1.1
+  firebase_storage: ^3.1.1
+  url_launcher: any
+  barcode_scan: 1.0.0 #Setup for iOS is not done
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_launcher_icons: ^0.7.4
+  #Docs for flutter icons: https://github.com/fluttercommunity/flutter_launcher_icons
+  #Run the following packages:
+  #flutter pub get
+  #flutter pub run flutter_launcher_icons:main
+flutter_icons:
+  image_path: "assets/images/icon.png"
+  android: true
+  ios: true
+
+
+# The following section is specific to Flutter.
+flutter:
+
+  uses-material-design: true
+  assets:
+    - assets/images/
+    - assets/animations/

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "71758485461",
+    "firebase_url": "https://mera-store.firebaseio.com",
+    "project_id": "mera-store",
+    "storage_bucket": "mera-store.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:71758485461:android:9a11047c227aaf5dfc4f5c",
+        "android_client_info": {
+          "package_name": "com.chetan.merastore"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "71758485461-38n4bb05cmq0biseoecq45ercno5id2h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.chetan.merastore",
+            "certificate_hash": "84b6f3376da7827be9347865765c94b762049631"
+          }
+        },
+        {
+          "client_id": "71758485461-i9fc48ilcg9nmo0f6s7oaitpb4rs1ur9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAsNphuBS4C4ishYTjqyKvluxfAX8kQtzg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "71758485461-i9fc48ilcg9nmo0f6s7oaitpb4rs1ur9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
