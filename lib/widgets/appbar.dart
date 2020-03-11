@@ -25,40 +25,43 @@ getAppBar(
     bottom: tabBar,
     leading: showBackButton
         ? IconButton(
-        icon: Icon(Icons.arrow_back_ios, color: myAppTheme.iconTheme.color, size: myAppTheme.iconTheme.size),
-        onPressed: () => Navigator.of(context).pop())
+            icon: Icon(Icons.arrow_back_ios, color: myAppTheme.iconTheme.color, size: myAppTheme.iconTheme.size),
+            onPressed: () => Navigator.of(context).pop())
         : IconButton(
-        icon: Icon(Icons.menu, color: myAppTheme.iconTheme.color, size: myAppTheme.iconTheme.size),
-        onPressed: () => scaffoldKey.currentState.openDrawer()),
+            icon: Icon(Icons.menu, color: myAppTheme.iconTheme.color, size: myAppTheme.iconTheme.size),
+            onPressed: () => scaffoldKey.currentState.openDrawer()),
     title: Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: <Widget>[
         //Title
-        Text(
-          strAppBarTitle,
-          style: myAppTheme.textTheme.display1,
-          textAlign: TextAlign.center,
+        Container(
+          width: MediaQuery.of(context).size.width * 0.7,
+          child: Text(
+            strAppBarTitle,
+            style: myAppTheme.textTheme.display1,
+            textAlign: TextAlign.center,
+          ),
         ),
 
         //Profile
         userProfile.containsKey("photo url")
             ? InkWell(
-            child: Container(
-              height: size * 0.07,
-              width: size * 0.07,
-              child: CircleAvatar(
-                backgroundImage: NetworkImage(userProfile["photo url"]),
-                minRadius: 90,
-                maxRadius: 180,
-              ),
-            ),
-            onTap: () => _checkLoggedInUser(context))
+                child: Container(
+                  height: size * 0.07,
+                  width: size * 0.07,
+                  child: CircleAvatar(
+                    backgroundImage: NetworkImage(userProfile["photo url"]),
+                    minRadius: 90,
+                    maxRadius: 180,
+                  ),
+                ),
+                onTap: () => _checkLoggedInUser(context))
             : Center(
-          child: IconButton(
-              icon: Icon(Icons.account_circle),
-              iconSize: size * 0.07,
-              onPressed: () => _checkLoggedInUser(context)),
-        ),
+                child: IconButton(
+                    icon: Icon(Icons.account_circle),
+                    iconSize: size * 0.07,
+                    onPressed: () => _checkLoggedInUser(context)),
+              ),
       ],
     ),
   );

@@ -81,11 +81,7 @@ class _SignInScreenState extends State<SignInScreen> with TickerProviderStateMix
                           child: SlideTransition(
                             position: _animOffset,
                             child: Text("Hello there!",
-                                style: TextStyle(
-                                    fontSize: size * 0.09,
-                                    fontFamily: 'Poppins',
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.white),
+                                style: myAppTheme.textTheme.bodyText1,
                                 textAlign: TextAlign.center),
                           ),
                           opacity: _animController,
