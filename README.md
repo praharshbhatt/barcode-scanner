@@ -1,6 +1,6 @@
 # Mera Store
 
-EPOSBarcode scanner and checkout for Mobile in Flutter
+E-POS Barcode scanner and checkout for Mobile in Flutter
 
 <img src="Screenshot_1.jpg" width=200>
 <img src="Screenshot_2.jpg" width=200>
@@ -18,4 +18,4 @@ Authentication: Firebase Auth
 Backend: Firebase Firestore
 
 # Database Configuration
-<img src="Database_config_1.png" width=500>
+<img src="Database_config_1.png" width=700>
