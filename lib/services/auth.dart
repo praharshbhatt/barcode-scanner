@@ -137,10 +137,13 @@ class AuthService {
     await dbFirestore
         .collection("User")
         .document(firebaseUser.email)
-        .setData(userProfile, merge: true)
+        .setData(userProfile, merge: false)
         .then((onValue) async {
       blReturn = true;
     });
+
+
+
     return blReturn;
   }
 

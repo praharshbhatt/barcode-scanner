@@ -13,6 +13,7 @@ import 'package:mera_store/widgets/dialogboxes.dart';
 import 'package:mera_store/widgets/drawer.dart';
 import '../main.dart';
 import '../themes/maintheme.dart';
+import 'checkout/checkout.dart';
 
 //==================This is the Homepage for the app==================
 
@@ -357,10 +358,19 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
         padding: const EdgeInsets.fromLTRB(80, 20, 80, 10),
         child: primaryRaisedButton(
           context: context,
-          text: "Proceed to Checkout",
+          text: "Checkout now",
           color: myAppTheme.primaryColor,
-          onPressed: () {
+          onPressed: () async {
             //Go to Checkout
+            await Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => CheckoutScreen()),
+            );
+
+            setState(() {
+              //Refresh the UI after returning back from the Checkout screen
+              mapProducts=userProfile["Unordered Products"];
+            });
           },
         ),
       ),
